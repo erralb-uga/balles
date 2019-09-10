@@ -25,4 +25,8 @@ export class PhysiqueService {
       r, c, m: r * r
     });
   }
+
+  getBalles(): Balle[] {
+    return this.balles;
+  }
 }

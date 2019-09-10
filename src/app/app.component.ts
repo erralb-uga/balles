@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {PhysiqueService} from './physique.service';
 import {Balle} from './PhysiqueDefs';
 import {Observable} from 'rxjs';
@@ -6,7 +6,8 @@ import {Observable} from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
 
@@ -29,5 +30,9 @@ export class AppComponent {
 
   get transfo(): string {
     return `scale(1, -1) translate(0, -${this.W})`;
+  }
+
+  getNbBalles(): number {
+    return this.ps.getBalles().length;
   }
 }

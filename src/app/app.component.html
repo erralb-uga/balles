@@ -1,7 +1,9 @@
-
+<h1>
+  Il y a {{getNbBalles()}} balles dans un cadre de {{W}}x{{2*W}} de côté
+</h1>
 <svg [attr.width]="W" [attr.height]="W" (click)="addBalle($event)">
   <g [attr.transform]="transfo">
-    <line x1="0" y1="0" x2="100" y2="100" stroke="black"/>
+    <line x1="0" y1="0" x2="200" y2="100" stroke="black"/>
     <circle *ngFor="let b of ballesObs | async"
             [attr.r]   = "b.r"
             [attr.cx]  = 'b.P[0]'

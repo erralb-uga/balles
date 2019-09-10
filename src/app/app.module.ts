@@ -13,7 +13,7 @@ import {PhysiqueService} from './physique.service';
   imports: [
     BrowserModule
   ],
-  providers: [PhysiqueService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
